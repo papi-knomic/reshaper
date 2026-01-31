@@ -31,16 +31,16 @@
     "dto",
     "presenter"
   ],
-  "author": "",
+  "author": "Samson Ogheneakporbo Moses <knomic10@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/papi-knomic/reshaper.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/papi-knomic/reshaper/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/papi-knomic/reshaper#readme",
   "engines": {
     "node": ">=16.0.0"
   },
