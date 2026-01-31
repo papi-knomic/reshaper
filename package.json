@@ -1,0 +1,53 @@
+{
+  "name": "reshaper",
+  "version": "1.0.0",
+  "description": "Laravel-inspired API Resource transformations for Node.js. Shape your data with elegance.",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.cjs",
+      "types": "./src/index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "api",
+    "resource",
+    "transform",
+    "json",
+    "serialization",
+    "laravel",
+    "express",
+    "rest",
+    "response",
+    "dto",
+    "presenter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {}
+}
