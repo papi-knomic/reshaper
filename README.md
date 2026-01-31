@@ -2,7 +2,7 @@
 
 Laravel-inspired API Resource transformations for Node.js. Shape your data with elegance.
 
-[![npm version](https://badge.fury.io/js/reshaper.svg)](https://www.npmjs.com/package/reshaper)
+[![npm version](https://badge.fury.io/js/@kn0mic%2Freshaper.svg)](https://www.npmjs.com/package/@kn0mic/reshaper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Why Reshaper?
@@ -19,13 +19,13 @@ If you've used Laravel's API Resources, you know how elegant they make data tran
 ## Installation
 
 ```bash
-npm install reshaper
+npm install @kn0mic/reshaper
 ```
 
 ## Quick Start
 
 ```javascript
-import { Resource } from 'reshaper';
+import { Resource } from '@kn0mic/reshaper';
 
 // Define a resource
 class UserResource extends Resource {
@@ -252,7 +252,7 @@ SimpleUser.paginate(result);
 
 ```javascript
 // resources/UserResource.js
-import { Resource } from 'reshaper';
+import { Resource } from '@kn0mic/reshaper';
 
 export default class UserResource extends Resource {
     static transform(user, options = {}) {
@@ -296,7 +296,7 @@ export const getUser = async (req, res) => {
 ## TypeScript Usage
 
 ```typescript
-import { Resource } from 'reshaper';
+import { Resource } from '@kn0mic/reshaper';
 
 interface User {
     id: number;
@@ -329,9 +329,9 @@ class UserResource extends Resource {
 ## CommonJS Support
 
 ```javascript
-const { Resource } = require('reshaper');
+const { Resource } = require('@kn0mic/reshaper');
 // or
-const Resource = require('reshaper');
+const Resource = require('@kn0mic/reshaper');
 ```
 
 ## License
