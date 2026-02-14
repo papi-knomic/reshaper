@@ -42,7 +42,7 @@ export class Resource {
     /**
      * Transform a single resource - must be implemented by child classes
      */
-    static transform<T = any, R = any>(resource: T, options?: Record<string, any>): R;
+    static transform(resource: any, options?: Record<string, any>): any;
 
     /**
      * Transform a collection of resources
