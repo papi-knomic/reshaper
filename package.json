@@ -1,6 +1,6 @@
 {
   "name": "@kn0mic/reshaper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Laravel-inspired API Resource transformations for Node.js. Shape your data with elegance.",
   "main": "src/index.js",
   "module": "src/index.js",
