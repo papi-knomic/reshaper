@@ -31,6 +31,10 @@ export interface DefinedResource<T, R> {
     wrap<D>(data: D, meta?: Record<string, any>): WrappedResult<D>;
 }
 
+type ResourceStatics<T, R> = {
+    transform(resource: T, options?: Record<string, any>): R;
+};
+
 /**
  * Abstract Resource base class for API transformations
  */
@@ -43,12 +47,20 @@ export class Resource {
     /**
      * Transform a collection of resources
      */
-    static collection<T = any, R = any>(resources: T[], options?: Record<string, any>): R[];
+    static collection<T, R>(
+        this: ResourceStatics<T, R>,
+        resources: T[],
+        options?: Record<string, any>
+    ): R[];
 
     /**
      * Transform resource only if it exists (null-safe)
      */
-    static make<T = any, R = any>(resource: T | null | undefined, options?: Record<string, any>): R | null;
+    static make<T, R>(
+        this: ResourceStatics<T, R>,
+        resource: T | null | undefined,
+        options?: Record<string, any>
+    ): R | null;
 
     /**
      * Conditionally include a value based on a condition
@@ -95,7 +107,11 @@ export class Resource {
     /**
      * Transform a paginated result set with metadata
      */
-    static paginate<T = any, R = any>(result: any, options?: PaginateOptions): PaginatedResult<R>;
+    static paginate<T, R>(
+        this: ResourceStatics<T, R>,
+        result: any,
+        options?: PaginateOptions
+    ): PaginatedResult<R>;
 
     /**
      * Create a simple resource transformer without extending the class
